@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+        }
+        h1 {
+            color: #FFD700; /* Gold color for the heading */
+        }
+        form {
+            background-color: #FFD700; /* Gold background for the form */
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input[type="password"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #FFD700; /* Gold background for the button */
+            border: none;
+            border-radius: 5px;
+            color: #000;
+        }
+        input[type="submit"]:hover {
+            background-color: #FFC107; /* Slightly darker gold for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Security Checker</h1>
+    <form id="passwordForm">
+        <label for="password">Enter your password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Check Password">
+    </form>
+
+    <script>
+        document.getElementById('passwordForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Not that secure, you just popped it into an untrusted website!");
+        });
+    </script>
+</body>
+</html>
